@@ -31,7 +31,7 @@ const Article: React.FC<Props> = ({ item }) => {
       ? item.imgUrl
       : `/${item.imgUrl}`;
 
-    return `http://localhost:3002${cleanedImgUrl}`;
+    return `https://pixelmagnet-admin-mern-server.netlify.app${cleanedImgUrl}`;
   };
 
   return (
