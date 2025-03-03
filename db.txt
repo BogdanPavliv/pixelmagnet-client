@@ -1,0 +1,8 @@
+Username: bogdanpavliv
+
+Password: bogdanpavliv123
+
+mongodb+srv://bogdanpavliv:bogdanpavliv123@cluster0.ibtxy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+mongodb+srv://bogdanpavliv:bogdanpavliv123@cluster0.ibtxy.mongodb.net/
+
