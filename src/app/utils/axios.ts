@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'pixelmagnet-admin-mern-server.netlify.app/api',
+    baseURL: 'https://pixelmagnet-admin-mern-server.netlify.app/api',
     validateStatus: () => true,
 })
 
