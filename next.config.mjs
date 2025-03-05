@@ -9,14 +9,14 @@ const nextConfig = {
       },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://pixelmagnet-admin-mern-server.netlify.app/api/:path*',
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/api/:path*',
+  //       destination: 'https://pixelmagnet-admin-mern-server.netlify.app/api/:path*',
+  //     },
+  //   ];
+  // },
 };
 
 export default nextConfig;
