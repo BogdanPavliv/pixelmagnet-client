@@ -6,14 +6,6 @@ const nextConfig = {
       { protocol: 'https', hostname: 'pixelmagnet-admin-mern-server.onrender.com' },
     ],
   },
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/api/:path*',
-  //       destination: 'https://pixelmagnet-admin-mern-server.netlify.app/api/:path*',
-  //     },
-  //   ];
-  // },
 };
 
 export default nextConfig;
