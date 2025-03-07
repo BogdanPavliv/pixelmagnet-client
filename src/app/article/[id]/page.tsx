@@ -26,7 +26,6 @@ interface Post {
 
 const ArticlePage = ({ params }: { params: { id: string } }) => {
 
-
   const [post, setPost] = useState<Post | null>(null)
   console.log(post);
   
@@ -46,8 +45,6 @@ const ArticlePage = ({ params }: { params: { id: string } }) => {
       swiperRef.current.slideTo(value);
     }
   };
-
-  // 
 
   // Завантаження поста з бекенду або fallback
   const fetchPost = useCallback(async () => {
