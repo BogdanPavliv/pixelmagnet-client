@@ -416,7 +416,7 @@ body.dark .action__button--menu-image {
   right: 45px;
   width: 218px;
   height: 96px;
-  background-image: url("../../public/img/section-begin/ellipse.svg");
+  background-image: url("../../../public/img/section-begin/ellipse.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -496,7 +496,7 @@ body.dark .action__button--menu-image {
   left: 0;
   width: 36px;
   height: 36px;
-  background-image: url("../../public/img/section-begin/more.svg");
+  background-image: url("../../../public/img/section-begin/more.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -518,7 +518,7 @@ body.dark .action__button--menu-image {
   right: 0;
   width: 36px;
   height: 36px;
-  background-image: url("../../public/img/section-begin/add.svg");
+  background-image: url("../../../public/img/section-begin/add.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -527,11 +527,11 @@ body.dark .action__button--menu-image {
 
 @font-face {
   font-family: "Urbanist-Regular", sans-serif;
-  src: url("./fonts/Urbanist-Regular.eot") format("eot"),
-    url("./fonts/Urbanist-Regular.otf") format("otf"),
-    url("./fonts/Urbanist-Regular.woff2") format("woff2"),
-    url("./fonts/Urbanist-Regular.woff") format("woff"),
-    url("./fonts/Urbanist-Regular.ttf") format("ttf");
+  src: url("../../app/fonts/Urbanist-Regular.eot") format("eot"),
+    url("../../app/fonts/Urbanist-Regular.otf") format("otf"),
+    url("../../app/fonts/Urbanist-Regular.woff2") format("woff2"),
+    url("../../app/fonts/Urbanist-Regular.woff") format("woff"),
+    url("../../app/fonts/Urbanist-Regular.ttf") format("ttf");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -539,11 +539,11 @@ body.dark .action__button--menu-image {
 
 @font-face {
   font-family: "Urbanist-Medium", sans-serif;
-  src: url("./fonts/Urbanist-Medium.eot") format("eot"),
-    url("./fonts/Urbanist-Medium.otf") format("otf"),
-    url("./fonts/Urbanist-Medium.woff2") format("woff2"),
-    url("./fonts/Urbanist-Medium.woff") format("woff"),
-    url("./fonts/Urbanist-Medium.ttf") format("ttf");
+  src: url("../../app/fonts/Urbanist-Medium.eot") format("eot"),
+    url("../../app/fonts/Urbanist-Medium.otf") format("otf"),
+    url("../../app/fonts/Urbanist-Medium.woff2") format("woff2"),
+    url("../../app/fonts/Urbanist-Medium.woff") format("woff"),
+    url("../../app/fonts/Urbanist-Medium.ttf") format("ttf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -551,11 +551,11 @@ body.dark .action__button--menu-image {
 
 @font-face {
   font-family: "Urbanist-SemiBold", sans-serif;
-  src: url("./fonts/Urbanist-SemiBold.eot") format("eot"),
-    url("./fonts/Urbanist-SemiBold.otf") format("otf"),
-    url("./fonts/Urbanist-SemiBold.woff2") format("woff2"),
-    url("./fonts/Urbanist-SemiBold.woff") format("woff"),
-    url("./fonts/Urbanist-SemiBold.ttf") format("ttf");
+  src: url("../../app/fonts/Urbanist-SemiBold.eot") format("eot"),
+    url("../../app/fonts/Urbanist-SemiBold.otf") format("otf"),
+    url("../../app/fonts/Urbanist-SemiBold.woff2") format("woff2"),
+    url("../../app/fonts/Urbanist-SemiBold.woff") format("woff"),
+    url("../../app/fonts/Urbanist-SemiBold.ttf") format("ttf");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -563,11 +563,11 @@ body.dark .action__button--menu-image {
 
 @font-face {
   font-family: "Urbanist-Bold", sans-serif;
-  src: url("./fonts/Urbanist-Bold.eot") format("eot"),
-    url("./fonts/Urbanist-Bold.otf") format("otf"),
-    url("./fonts/Urbanist-Bold.woff2") format("woff2"),
-    url("./fonts/Urbanist-Bold.woff") format("woff"),
-    url("./fonts/Urbanist-Bold.ttf") format("ttf");
+  src: url("../../app/fonts/Urbanist-Bold.eot") format("eot"),
+    url("../../app/fonts/Urbanist-Bold.otf") format("otf"),
+    url("../../app/fonts/Urbanist-Bold.woff2") format("woff2"),
+    url("../../app/fonts/Urbanist-Bold.woff") format("woff"),
+    url("../../app/fonts/Urbanist-Bold.ttf") format("ttf");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -575,11 +575,11 @@ body.dark .action__button--menu-image {
 
 @font-face {
   font-family: "Urbanist-Black", sans-serif;
-  src: url("./fonts/Urbanist-Black.eot") format("eot"),
-    url("./fonts/Urbanist-Black.otf") format("otf"),
-    url("./fonts/Urbanist-Black.woff2") format("woff2"),
-    url("./fonts/Urbanist-Black.woff") format("woff"),
-    url("./fonts/Urbanist-Black.ttf") format("ttf");
+  src: url("../../app/fonts/Urbanist-Black.eot") format("eot"),
+    url("../../app/fonts/Urbanist-Black.otf") format("otf"),
+    url("../../app/fonts/Urbanist-Black.woff2") format("woff2"),
+    url("../../app/fonts/Urbanist-Black.woff") format("woff"),
+    url("../../app/fonts/Urbanist-Black.ttf") format("ttf");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -978,7 +978,7 @@ body.dark .action__button--menu-image {
     left: 0;
     width: 56px;
     height: 56px;
-    background-image: url("../../public/img/section-begin/quote-up.svg");
+    background-image: url("../../../public/img/section-begin/quote-up.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1076,7 +1076,7 @@ body.dark .action__button--menu-image {
 .magnetize {
   padding: 142px 0;
   min-height: 744px;
-  background-image: url("../../public/img/section-magnetize/magnetize-img.jpg");
+  background-image: url("../../../public/img/section-magnetize/magnetize-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1312,7 +1312,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-featured-works/arrows.svg");
+    background-image: url("../../../public/img/section-featured-works/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -1326,7 +1326,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-featured-works/arrows.svg");
+    background-image: url("../../../public/img/section-featured-works/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -1452,7 +1452,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-featured-works/arrows.svg");
+    background-image: url("../../../public/img/section-featured-works/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -1467,7 +1467,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-featured-works/arrows.svg");
+    background-image: url("../../../public/img/section-featured-works/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -1700,7 +1700,7 @@ body.dark .action__button--menu-image {
     left: 0;
     width: 56px;
     height: 56px;
-    background-image: url("../../public/img/section-testimonials/quote-up.svg");
+    background-image: url("../../../public/img/section-testimonials/quote-up.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1975,7 +1975,7 @@ body.dark .action__button--menu-image {
     width: 100%;
     min-height: 488px;
     border-radius: 24px;
-    background-image: url("../../public/img/section-empower/section-empower-bg.jpg");
+    background-image: url("../../../public/img/section-empower/section-empower-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2283,7 +2283,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -2297,7 +2297,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -2437,7 +2437,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -2452,7 +2452,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -2635,7 +2635,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -2649,7 +2649,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -2789,7 +2789,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -2804,7 +2804,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -2979,7 +2979,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -2993,7 +2993,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -3133,7 +3133,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -3148,7 +3148,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -3325,7 +3325,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -3339,7 +3339,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -3475,7 +3475,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -3490,7 +3490,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-branding/arrows.svg");
+    background-image: url("../../../public/img/section-branding/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -3807,7 +3807,7 @@ body.dark .action__button--menu-image {
 .mission {
   padding: 142px 0;
   min-height: 744px;
-  background-image: url("../../public/img/section-mission/section-mission-img.jpg");
+  background-image: url("../../../public/img/section-mission/section-mission-img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -5594,7 +5594,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-featured-works/arrows.svg");
+    background-image: url("../../../public/img/section-featured-works/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -5608,7 +5608,7 @@ body.dark .action__button--menu-image {
     height: 40px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-featured-works/arrows.svg");
+    background-image: url("../../../public/img/section-featured-works/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -5722,7 +5722,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-featured-works/arrows.svg");
+    background-image: url("../../../public/img/section-featured-works/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
@@ -5737,7 +5737,7 @@ body.dark .action__button--menu-image {
     height: 32px;
     border: 1px solid #9E9E9E;
     border-radius: 200px;
-    background-image: url("../../public/img/section-featured-works/arrows.svg");
+    background-image: url("../../../public/img/section-featured-works/arrows.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 32px 16px;
