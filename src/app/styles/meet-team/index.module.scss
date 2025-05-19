@@ -1,0 +1,85 @@
+/* section meet_team start */
+
+.meet_team {
+  padding: 72px 0 92px 0;
+
+  &__top {
+    max-width: 577px;
+    margin-bottom: 46px;
+  }
+
+  &__bottom__top {
+    margin-bottom: 46px;
+  }
+
+  &__image {
+    width: 100%;
+    border-radius: 24px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+  }
+
+  &__item {
+    cursor: pointer;
+    padding-bottom: 13px;
+  }
+
+  &__item_image {
+    width: 100%;
+    border-radius: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__item_name {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28.8px;
+    color: var(--title-1);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  &__item_role {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--text-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .meet_team {
+    padding: 42px 0 58px 0;
+  }
+
+  .meet_team__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .meet_team__item {
+    padding-bottom: 0px;
+  }
+
+  .meet_team__item_image {
+    margin-bottom: 16px;
+  }
+
+  .meet_team__item_name {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 8px;
+  }
+
+  .meet_team__item_role {
+    font-size: 14px;
+    line-height: 23.8px;
+    letter-spacing: 0.25px;
+  }
+}
+
+/* section meet_team end */

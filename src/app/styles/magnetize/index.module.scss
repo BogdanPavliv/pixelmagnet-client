@@ -1,0 +1,69 @@
+/* section magnetize start */
+
+.magnetize {
+  padding: 142px 0;
+  min-height: 744px;
+  background-image: url("/img/section-magnetize/magnetize-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__wrapper {
+    position: relative;
+
+    .circle {
+      position: absolute;
+      right: 203px;
+      bottom: 50px;
+      width: 215px;
+      height: 215px;
+      z-index: 1;
+      background-color: #fff;
+      border: 12px solid #156AD4;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 30px;
+      color: #156AD4;
+      text-transform: uppercase;
+      cursor: pointer;
+
+      transition: all 250ms ease-in;
+    }
+
+    .orange {
+      border-color: #FF772A;
+      transform: scale(1.2);
+    }
+  }
+}
+
+/* section magnetize end */
+
+@media (max-width: 470px) {
+  .magnetize {
+    padding: 68px 0 33px 0;
+    min-height: 506px;
+  }
+
+  .magnetize__wrapper .circle {
+    right: 50%;
+    bottom: -170px;
+    transform: translateX(50%);
+    width: 142px;
+    height: 142px;
+
+    span {
+      width: 52px;
+    }
+  }
+
+  .magnetize__title {
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+}

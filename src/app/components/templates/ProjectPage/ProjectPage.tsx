@@ -3,8 +3,8 @@ import ProjectDetails from "../../../components/modules/ProjectPage/ProjectDetai
 import ProjectInfo from "../../../components/modules/ProjectPage/ProjectInfo";
 import ProjectCharacteristics from "../../../components/modules/ProjectPage/ProjectCharacteristics";
 import ProjectGallery from "../../../components/modules/ProjectPage/ProjectGallery";
-import Testimonials from "../../../components/modules/ProjectPage/Testimonials";
-import FeaturedWorks from "../../../components/modules/ProjectPage/FeaturedWorks";
+import Testimonials from "../../../components/modules/MainPage/Testimonials";
+import FeaturedWorks from "../../../components/modules/MainPage/FeaturedWorks";
 import Magnetize from "../../../components/modules/MainPage/Magnetize";
 
 const ProjectPage = ({ params }: { params: { id: string } }) => {

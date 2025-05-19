@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from '../../../styles/project-gallery/index.module.scss';
 import { dataProjects } from "../../../utils/data";
 
 const ProjectGallery = ({ params }: { params: { id: string } }) => {
@@ -8,44 +9,44 @@ const ProjectGallery = ({ params }: { params: { id: string } }) => {
   if (!project) return <p>Project not found</p>;
 
   return (
-    <section className="project-gallery">
+    <section className={styles.project_gallery}>
       <div className="container">
-        <div className="project-gallery__inner">
-          <div className="project-gallery__top">
-            <div className="project-gallery__img-lg-wrapper">
+        <div className={styles.project_gallery__inner}>
+          <div className={styles.project_gallery__top}>
+            <div className={styles.project_gallery__img_lg_wrapper}>
               <Image
                 width={763}
                 height={510}
-                className="project-gallery__img-lg"
+                className={styles.project_gallery__img_lg}
                 src={project.images.image2}
                 alt=""
               />
             </div>
-            <div className="project-gallery__img-sm-wrapper">
+            <div className={styles.project_gallery__img_sm_wrapper}>
               <Image
                 width={501}
                 height={510}
-                className="project-gallery__img-sm"
+                className={styles.project_gallery__img_sm}
                 src={project.images.image3}
                 alt=""
               />
             </div>
           </div>
-          <div className="project-gallery__bottom">
-            <div className="project-gallery__img-sm-wrapper">
+          <div className={styles.project_gallery__bottom}>
+            <div className={styles.project_gallery__img_sm_wrapper}>
               <Image
                 width={501}
                 height={510}
-                className="project-gallery__img-sm"
+                className={styles.project_gallery__img_sm}
                 src={project.images.image4}
                 alt=""
               />
             </div>
-            <div className="project-gallery__img-lg-wrapper">
+            <div className={styles.project_gallery__img_lg_wrapper}>
               <Image
                 width={763}
                 height={510}
-                className="project-gallery__img-lg"
+                className={styles.project_gallery__img_lg}
                 src={project.images.image5}
                 alt=""
               />

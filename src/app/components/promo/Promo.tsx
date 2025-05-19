@@ -1,8 +1,4 @@
-import React from 'react'
-
-type Props = {}
-
-const Promo = (props: Props) => {
+const Promo = () => {
   return (
     <div className="promo">View</div>
   )

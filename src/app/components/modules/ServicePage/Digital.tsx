@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
 import Image from "next/image";
+import styles from '../../../styles/digital/index.module.scss';
 import Promo from "../../../components/promo/Promo";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -24,36 +25,36 @@ const Digital = () => {
     }
   };
   return (
-    <section className="digital">
+    <section className={styles.digital}>
       <div className="container-lg">
-        <div className="digital__top">
-          <div className="digital__top--left">
-            <h3 className="tag">Service</h3>
-            <h1 className="title-secondary">digital transformation</h1>
-            <div className="digital__top--text">
+        <div className={styles.digital__top}>
+          <div className={styles.digital__top__left}>
+            <h3 className={styles.tag}>Service</h3>
+            <h1 className={`title-secondary ${styles.digital__title_secondary}`}>digital transformation</h1>
+            <div className={styles.digital__top__text}>
               Our suite of services is designed to cater to every aspect of your
               online presence, from boosting your visibility to engaging your
               audience and driving conversions.
             </div>
           </div>
-          <div className="digital__top--right">
-            <div className="digital__types">
-              <div className="digital__types--left">
-                <div className="digital__item">Logo design</div>
-                <div className="digital__item">UX/UI Design</div>
-                <div className="digital__item">App Development</div>
-                <div className="digital__item">Web Development</div>
+          <div className={styles.digital__top__right}>
+            <div className={styles.digital__types}>
+              <div className={styles.digital__types__left}>
+                <div className={styles.digital__item}>Logo design</div>
+                <div className={styles.digital__item}>UX/UI Design</div>
+                <div className={styles.digital__item}>App Development</div>
+                <div className={styles.digital__item}>Web Development</div>
               </div>
-              <div className="digital__types--right">
-                <div className="digital__item">Web Development</div>
-                <div className="digital__item">Digital Transformation</div>
+              <div className={styles.digital__types__right}>
+                <div className={styles.digital__item}>Web Development</div>
+                <div className={styles.digital__item}>Digital Transformation</div>
               </div>
             </div>
           </div>
         </div>
-        <div className="digital__bottom">
+        <div className={styles.digital__bottom}>
           <div className="container-right">
-            <div className="digital__slider--wrapper">
+            <div className={styles.digital__slider__wrapper}>
               <Swiper
                 {...slideDigitalSettings}
                 onSwiper={(swiper) => {
@@ -63,11 +64,11 @@ const Digital = () => {
                 className="swiper-digital"
               >
                 {dataDigital.map((item, i) => (
-                  <SwiperSlide key={i} className="digital__slide--wrapper">
-                    <div className="digital__slide">
-                      <div className="digital__slide--img-wrapper">
+                  <SwiperSlide key={i} className={styles.digital__slide__wrapper}>
+                    <div className={styles.digital__slide}>
+                      <div className={styles.digital__slide__img_wrapper}>
                         <Image
-                          className="digital__slide--img"
+                          className={styles.digital__slide__img}
                           src={item.image}
                           width={548}
                           height={311}
@@ -75,18 +76,18 @@ const Digital = () => {
                         />
                         {item.promo && <Promo />}
                       </div>
-                      <h3 className="digital__slide--title">{item.title}</h3>
-                      <p className="digital__slide--text">{item.text}</p>
+                      <h3 className={styles.digital__slide__title}>{item.title}</h3>
+                      <p className={styles.digital__slide__text}>{item.text}</p>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </div>
           </div>
-          <div className="digital__slider--controls">
+          <div className={styles.digital__slider__controls}>
             {/* Input для перемикання слайдів */}
             <input
-              className="digital__slider--range"
+              className={styles.digital__slider__range}
               type="range"
               min="0"
               max={dataDigital.length - 1}

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, FormEvent } from "react";
+import styles from '../../../styles/contacts/index.module.scss';
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 
@@ -163,13 +164,13 @@ const ContactsSection = () => {
     }
   };
   return (
-    <section className="contacts">
+    <section className={styles.contacts}>
       <div className="container-form">
-        <div className="contacts__inner">
-          <form action="#!" id="form" className="form" onSubmit={handleSubmit}>
-            <div className="form__top">
-              <div className="form__top--row">
-                <label className="form__label" htmlFor="formName">
+        <div className={styles.contacts__inner}>
+          <form action="#!" id="form" className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.form__top}>
+              <div className={styles.form__top__row}>
+                <label className={styles.form__label} htmlFor="formName">
                   Name*
                 </label>
                 <input
@@ -178,8 +179,8 @@ const ContactsSection = () => {
                   onBlur={(e) => blurHandler(e)}
                   className={
                     emptyNameDirty && emptyNameError
-                      ? "form__input form__input--error"
-                      : "form__input"
+                      ? `${styles.form__input} ${styles.form__input__error}`
+                      : `${styles.form__input}`
                   }
                   id="formName"
                   type="text"
@@ -187,19 +188,19 @@ const ContactsSection = () => {
                   placeholder="Your name"
                 />
 
-                <label className="form__label" htmlFor="formPhone">
+                <label className={styles.form__label} htmlFor="formPhone">
                   Phone number
                 </label>
                 <PhoneInput
                   value={value}
                   onChange={(phone: string | undefined) => setValue(phone)}
-                  className="form__input"
+                  className={styles.form__input}
                   id="formPhone"
                   type="text"
                   name="phone"
                 />
 
-                <label className="form__label" htmlFor="formEmail">
+                <label className={styles.form__label} htmlFor="formEmail">
                   Email*
                 </label>
                 <input
@@ -208,8 +209,8 @@ const ContactsSection = () => {
                   onBlur={(e) => blurHandler(e)}
                   className={
                     emailDirty && emailError
-                      ? "form__input form__input--error"
-                      : "form__input"
+                      ? `${styles.form__input} ${styles.form__input__error}`
+                      : `${styles.form__input}`
                   }
                   id="formEmail"
                   type="text"
@@ -217,7 +218,7 @@ const ContactsSection = () => {
                   placeholder="Your email"
                 />
 
-                <label className="form__label" htmlFor="formCompany">
+                <label className={styles.form__label} htmlFor="formCompany">
                   Company*
                 </label>
                 <input
@@ -226,8 +227,8 @@ const ContactsSection = () => {
                   onBlur={(e) => blurHandler(e)}
                   className={
                     emptyCompanyDirty && emptyCompanyError
-                      ? "form__input form__input--error"
-                      : "form__input"
+                      ? `${styles.form__input} ${styles.form__input__error}`
+                      : `${styles.form__input}`
                   }
                   id="formCompany"
                   type="text"
@@ -235,27 +236,27 @@ const ContactsSection = () => {
                   placeholder="Company name"
                 />
 
-                <label className="form__label" htmlFor="formWebsite">
+                <label className={styles.form__label} htmlFor="formWebsite">
                   Website
                 </label>
                 <input
-                  className="form__input"
+                  className={styles.form__input}
                   id="formWebsite"
                   type="text"
                   name="website"
                   placeholder="Company location"
                 />
               </div>
-              <div className="form__top--row">
-                <label className="form__label" htmlFor="formCategory">
+              <div className={styles.form__top__row}>
+                <label className={styles.form__label} htmlFor="formCategory">
                   Category*
                 </label>
-                <div className="form__select--wrapper">
+                <div className={styles.form__select__wrapper}>
                   <select
                     className={
                       selectedCategory
-                        ? "form__select form__select-active"
-                        : "form__select"
+                        ? `${styles.form__select} ${styles.form__select_active}`
+                        : `${styles.form__select}`
                     }
                     id="formCategory"
                     value={selectedCategory}
@@ -271,7 +272,7 @@ const ContactsSection = () => {
                   </select>
                 </div>
 
-                <label className="form__label" htmlFor="formLocation">
+                <label className={styles.form__label} htmlFor="formLocation">
                   Location*
                 </label>
                 <input
@@ -280,8 +281,8 @@ const ContactsSection = () => {
                   onBlur={(e) => blurHandler(e)}
                   className={
                     emptyLocationDirty && emptyLocationError
-                      ? "form__input form__input--error"
-                      : "form__input"
+                      ? `${styles.form__input} ${styles.form__input__error}`
+                      : `${styles.form__input}`
                   }
                   id="formLocation"
                   type="text"
@@ -289,18 +290,18 @@ const ContactsSection = () => {
                   placeholder="Company location"
                 />
 
-                <label className="form__label" htmlFor="formBudget">
+                <label className={styles.form__label} htmlFor="formBudget">
                   Budget
                 </label>
 
-                <div className="form__budget" id="formBudget">
+                <div className={styles.form__budget} id="formBudget">
                   {budgetOptions.map((budget) => (
                     <button
                       key={budget}
                       className={
                         selectedBudget === budget
-                          ? "budget-button budget-button-active"
-                          : "budget-button"
+                          ? `${styles.budget_button} ${styles.budget_button_active}`
+                          : `${styles.budget_button}`
                       }
                       type="button"
                       onClick={() => handleBudgetClick(budget)}
@@ -317,30 +318,30 @@ const ContactsSection = () => {
                   placeholder="Or type the amount"
                   value={customBudget}
                   onChange={handleCustomBudgetChange}
-                  className="form__input"
+                  className={styles.form__input}
                 />
               </div>
             </div>
-            <div className="form__middle">
-              <label className="form__label" htmlFor="formTextarea">
+            <div className={styles.form__middle}>
+              <label className={styles.form__label} htmlFor="formTextarea">
                 Summary
               </label>
               <textarea
-                className="form__textarea"
+                className={styles.form__textarea}
                 id="formTextarea"
                 name="message"
                 placeholder="Briefly tell us about your projects"
               ></textarea>
-              <p className="agree-text">
+              <p className={styles.agree_text}>
                 By clicking the submit button you agree to our{" "}
-                <a className="agree-link" href="#">
+                <a className={styles.agree_link} href="#">
                   Privacy Policy
                 </a>{" "}
                 terms.
               </p>
             </div>
-            <div className="form__bottom">
-              <button disabled={!formValid} className="form__btn" type="submit">
+            <div className={styles.form__bottom}>
+              <button disabled={!formValid} className={styles.form__btn} type="submit">
                 Submit
               </button>
             </div>

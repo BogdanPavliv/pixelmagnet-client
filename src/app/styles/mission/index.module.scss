@@ -1,0 +1,43 @@
+/* section mission start */
+
+.mission {
+  padding: 142px 0;
+  min-height: 744px;
+  background-image: url("/img/section-mission/section-mission-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .text_white {
+    color: #fff;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 67.2px;
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission {
+    min-height: 678px;
+  }
+
+  .mission__text {
+    font-size: 26px;
+    line-height: 46.8px;
+  }
+}
+
+@media (max-width: 470px) {
+  .mission {
+    padding: 31px 0 65px 0;
+    min-height: 529px;
+  }
+}
+
+/* section mission end */

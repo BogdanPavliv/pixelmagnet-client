@@ -1,5 +1,6 @@
 import React, {ReactNode} from 'react';
 import { useState, useRef } from 'react';
+import styles from '../../styles/magnetize/index.module.scss';
 
 type Props = {
     children: ReactNode;
@@ -19,7 +20,7 @@ const Circle: React.FC<Props> = ({children}) => {
     }
 
   return (
-    <div ref={circleRef} className={ hover ? "circle orange" : "circle" } onMouseOver={hoverHandleOn} onMouseLeave={hoverHandleOff}>
+    <div ref={circleRef} className={ hover ? `${styles.circle} ${styles.orange}` : `${styles.circle}` } onMouseOver={hoverHandleOn} onMouseLeave={hoverHandleOff}>
        <span>{children}</span> 
     </div>
   )

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
 import Image from "next/image";
+import styles from '../../../styles/advancement/index.module.scss';
 import Promo from "../../../components/promo/Promo";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -23,36 +24,36 @@ const Advancement = () => {
     }
   };
   return (
-    <section className="advancement">
+    <section className={styles.advancement}>
       <div className="container-lg">
-        <div className="advancement__top">
-          <div className="advancement__top--left">
-            <h3 className="tag">Service</h3>
-            <h1 className="title-secondary">technological advancement</h1>
-            <div className="advancement__top--text">
+        <div className={styles.advancement__top}>
+          <div className={styles.advancement__top__left}>
+            <h3 className={styles.tag}>Service</h3>
+            <h1 className={`title-secondary ${styles.advancement__title_secondary}`}>technological advancement</h1>
+            <div className={styles.advancement__top__text}>
               Our suite of services is designed to cater to every aspect of your
               online presence, from boosting your visibility to engaging your
               audience and driving conversions.
             </div>
           </div>
-          <div className="advancement__top--right">
-            <div className="advancement__types">
-              <div className="advancement__types--left">
-                <div className="advancement__item">Logo design</div>
-                <div className="advancement__item">UX/UI Design</div>
-                <div className="advancement__item">App Development</div>
-                <div className="advancement__item">Web Development</div>
+          <div className={styles.advancement__top__right}>
+            <div className={styles.advancement__types}>
+              <div className={styles.advancement__types__left}>
+                <div className={styles.advancement__item}>Logo design</div>
+                <div className={styles.advancement__item}>UX/UI Design</div>
+                <div className={styles.advancement__item}>App Development</div>
+                <div className={styles.advancement__item}>Web Development</div>
               </div>
-              <div className="advancement__types--right">
-                <div className="advancement__item">Web Development</div>
-                <div className="advancement__item">Digital Transformation</div>
+              <div className={styles.advancement__types__right}>
+                <div className={styles.advancement__item}>Web Development</div>
+                <div className={styles.advancement__item}>Digital Transformation</div>
               </div>
             </div>
           </div>
         </div>
-        <div className="advancement__bottom">
+        <div className={styles.advancement__bottom}>
           <div className="container-right">
-            <div className="advancement__slider--wrapper">
+            <div className={styles.advancement__slider__wrapper}>
               <Swiper
                 {...sliderAdvancementSettings}
                 onSwiper={(swiper) => {
@@ -62,11 +63,11 @@ const Advancement = () => {
                 className="swiper-advancement"
               >
                 {dataAdvancement.map((item, i) => (
-                  <SwiperSlide key={i} className="advancement__slide--wrapper">
-                    <div className="advancement__slide">
-                      <div className="advancement__slide--img-wrapper">
+                  <SwiperSlide key={i} className={styles.advancement__slide__wrapper}>
+                    <div className={styles.advancement__slide}>
+                      <div className={styles.advancement__slide__img_wrapper}>
                         <Image
-                          className="advancement__slide--img"
+                          className={styles.advancement__slide__img}
                           src={item.image}
                           width={548}
                           height={311}
@@ -74,20 +75,20 @@ const Advancement = () => {
                         />
                         {item.promo && <Promo />}
                       </div>
-                      <h3 className="advancement__slide--title">
+                      <h3 className={styles.advancement__slide__title}>
                         {item.title}
                       </h3>
-                      <p className="advancement__slide--text">{item.text}</p>
+                      <p className={styles.advancement__slide__text}>{item.text}</p>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </div>
           </div>
-          <div className="advancement__slider--controls">
+          <div className={styles.advancement__slider__controls}>
             {/* Input для перемикання слайдів */}
             <input
-              className="advancement__slider--range"
+              className={styles.advancement__slider__range}
               type="range"
               min="0"
               max={dataAdvancement.length - 1}

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
 import Image from "next/image";
+import styles from '../../../styles/branding/index.module.scss';
 import Promo from "../../../components/promo/Promo";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -25,38 +26,38 @@ const Branding = () => {
     }
   };
   return (
-    <section className="branding">
+    <section className={styles.branding}>
       <div className="container-lg">
-        <div className="branding__top">
-          <div className="branding__top--left">
-            <h3 className="tag">Service</h3>
-            <h1 className="title-secondary">
+        <div className={styles.branding__top}>
+          <div className={styles.branding__top__left}>
+            <h3 className={styles.tag}>Service</h3>
+            <h1 className={`title-secondary ${styles.branding__title_secondary}`}>
               BRANDING & <br /> UX/UI
             </h1>
-            <div className="branding__top--text">
+            <div className={styles.branding__top__text}>
               Our suite of services is designed to cater to every aspect of your
               online presence, from boosting your visibility to engaging your
               audience and driving conversions.
             </div>
           </div>
-          <div className="branding__top--right">
-            <div className="branding__types">
-              <div className="branding__types--left">
-                <div className="branding__item">Logo design</div>
-                <div className="branding__item">UX/UI Design</div>
-                <div className="branding__item">App Development</div>
-                <div className="branding__item">Web Development</div>
+          <div className={styles.branding__top__right}>
+            <div className={styles.branding__types}>
+              <div className={styles.branding__types__left}>
+                <div className={styles.branding__item}>Logo design</div>
+                <div className={styles.branding__item}>UX/UI Design</div>
+                <div className={styles.branding__item}>App Development</div>
+                <div className={styles.branding__item}>Web Development</div>
               </div>
-              <div className="branding__types--right">
-                <div className="branding__item">Web Development</div>
-                <div className="branding__item">Digital Transformation</div>
+              <div className={styles.branding__types__right}>
+                <div className={styles.branding__item}>Web Development</div>
+                <div className={styles.branding__item}>Digital Transformation</div>
               </div>
             </div>
           </div>
         </div>
-        <div className="branding__bottom">
+        <div className={styles.branding__bottom}>
           <div className="container-right">
-            <div className="branding__slider--wrapper">
+            <div className={styles.branding__slider__wrapper}>
               <Swiper
                 {...sliderBrandingSettings}
                 onSwiper={(swiper) => {
@@ -68,11 +69,11 @@ const Branding = () => {
                 className="swiper-branding"
               >
                 {dataBranding.map((item, i) => (
-                  <SwiperSlide key={i} className="branding__slide--wrapper">
-                    <div className="branding__slide">
-                      <div className="branding__slide--img-wrapper">
+                  <SwiperSlide key={i} className={styles.branding__slide__wrapper}>
+                    <div className={styles.branding__slide}>
+                      <div className={styles.branding__slide__img_wrapper}>
                         <Image
-                          className="branding__slide--img"
+                          className={styles.branding__slide__img}
                           src={item.image}
                           width={548}
                           height={311}
@@ -80,18 +81,18 @@ const Branding = () => {
                         />
                         {item.promo && <Promo />}
                       </div>
-                      <h3 className="branding__slide--title">{item.title}</h3>
-                      <p className="branding__slide--text">{item.text}</p>
+                      <h3 className={styles.branding__slide__title}>{item.title}</h3>
+                      <p className={styles.branding__slide__text}>{item.text}</p>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </div>
           </div>
-          <div className="branding__slider--controls">
+          <div className={styles.branding__slider__controls}>
             {/* Input для перемикання слайдів */}
             <input
-              className="branding__slider--range"
+              className={styles.branding__slider__range}
               type="range"
               min="0"
               max={dataBranding.length - 1}

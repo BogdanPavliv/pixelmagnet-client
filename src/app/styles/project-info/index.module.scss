@@ -1,0 +1,88 @@
+/* section project-info start */
+
+.project_info {
+  padding: 166px 0 72px 0;
+  background-color: #156AD4;
+
+  &__table {
+    color: #fff;
+  }
+
+  &__table__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 46px;
+  }
+
+  &__table__row:last-child {
+    margin-bottom: 0px;
+  }
+
+  &__table__row_left {
+    max-width: 501px;
+    width: 100%;
+  }
+
+  &__table__row_right {
+    max-width: 736px;
+    width: 100%;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+  }
+
+  &__table__title {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 57.6px;
+    text-transform: uppercase;
+  }
+
+  &__table__list {
+    padding-left: 40px;
+  }
+
+  &__table__item {
+    position: relative;
+  }
+
+  &__table__item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .project_info {
+    padding: 139px 0 53px 0;
+  }
+
+  .project_info__table__row {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .project_info__table__title {
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+
+  .project_info__table__row_right {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+/* section project-info end */

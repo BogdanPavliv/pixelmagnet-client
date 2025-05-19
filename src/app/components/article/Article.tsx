@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/article/index.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -35,23 +36,23 @@ const Article: React.FC<Props> = ({ item }) => {
   };
 
   return (
-    <article className="article">
-      <div className="article__img__wrapper">
-        <Link href={linkHref} className="article__link-detail">
+    <article className={styles.article}>
+      <div className={styles.article__img__wrapper}>
+        <Link href={linkHref} className={styles.article__link_detail}>
           <Image
             width={628}
             height={572}
-            className="article__img"
+            className={styles.article__img}
             src={getImageSrc()}
             alt={item.title}
           />
         </Link>
       </div>
-      <div className="acticle__content">
-        <Link href={linkHref} className="article__link-article">
-          <h4 className="article__title">{item.title}</h4>
+      <div className={styles.acticle__content}>
+        <Link href={linkHref} className={styles.article__link_article}>
+          <h4 className={styles.article__title}>{item.title}</h4>
         </Link>
-        <p className="article__text">{item.text}</p>
+        <p className={styles.article__text}>{item.text}</p>
       </div>
     </article>
   );

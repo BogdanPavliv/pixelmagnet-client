@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import styles from "../../../blog/blog.module.scss";
+import Image from "next/image";
+import styles from '../../../styles/posts/index.module.scss';
 import { dataPosts, dataPostsStatic } from "../../../utils/data";
 import Article from "../../article/Article";
-import Circle from "../../UI/Circle";
-import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 
 import { getAllPosts } from "../../../store/postSlice";
@@ -107,13 +106,13 @@ const Posts: React.FC = () => {
   return (
     <section className={styles.posts}>
       <div className="container">
-        <div className="posts__inner">
-          <div className="posts__top">
-            <div className="posts__top--left">
+        <div className={styles.posts__inner}>
+          <div className={styles.posts__top}>
+            <div className={styles.posts__top__left}>
               <h1 className="title">Blog</h1>
             </div>
-            <div className="posts__top--right">
-              <p className="posts__top--right-text">
+            <div className={styles.posts__top__right}>
+              <p className={styles.posts__top__right_text}>
                 Take a look at some of our proudest moments, where creativity,
                 strategy, and innovation came together to make brands shine in
                 the digital realm. Our success stories are a testament to our
@@ -122,33 +121,33 @@ const Posts: React.FC = () => {
             </div>
           </div>
 
-          <div className="posts__bottom">
-            <div className="posts__large">
-              <article className="articleLarge">
-                <div className="articleLarge__img__wrapper">
+          <div className={styles.posts__bottom}>
+            <div className={styles.posts__large}>
+              <article className={styles.articleLarge}>
+                <div className={styles.articleLarge__img__wrapper}>
                   <Image
                     width={1290}
                     height={572}
-                    className="articleLarge__img"
+                    className={styles.articleLarge__img}
                     src="/img/section-posts/post-img-5.jpg"
                     alt=""
                   />
                 </div>
-                <div className="articleLarge__content--wrapper">
-                  <div className="articleLarge__content">
-                    <h4 className="articleLarge__title">
+                <div className={styles.articleLarge__content__wrapper}>
+                  <div className={styles.articleLarge__content}>
+                    <h4 className={styles.articleLarge__title}>
                       Introducing: A brand new Dribbble for your portfolio
                     </h4>
-                    <p className="articleLarge__text">
+                    <p className={styles.articleLarge__text}>
                       Our suite of services is designed to cater to every aspect
                       of your online presence, from boosting your visibility to
                       engaging your audience and driving conversions.
                     </p>
-                    <div className="articleLarge__category">
+                    <div className={styles.articleLarge__category}>
                       2023 - UX/UI & App Development
                     </div>
                   </div>
-                  <a className="articleLarge__link" href="#">
+                  <a className={styles.articleLarge__link} href="#">
                     <Image
                       width={167}
                       height={167}
@@ -161,7 +160,7 @@ const Posts: React.FC = () => {
               </article>
             </div>
 
-            <div className="posts__static">
+            <div className={styles.posts__static}>
               <div className={styles.articles}>
                 {dataPostsStatic.map((item: PostItem, idx) => (
                   <Article item={item} key={idx} />
@@ -169,9 +168,9 @@ const Posts: React.FC = () => {
               </div>
             </div>
 
-            <div className="posts__large">
-              <article className="articleLarge">
-                <div className="articleLarge__img__wrapper">
+            <div className={styles.posts__large}>
+              <article className={styles.articleLarge}>
+                <div className={styles.articleLarge__img__wrapper}>
                   <Image
                     width={1290}
                     height={572}
@@ -179,26 +178,26 @@ const Posts: React.FC = () => {
                     alt=""
                   />
                 </div>
-                <div className="articleLarge__content--wrapper">
-                  <div className="articleLarge__content">
-                    <h4 className="articleLarge__title">
+                <div className={styles.articleLarge__content__wrapper}>
+                  <div className={styles.articleLarge__content}>
+                    <h4 className={styles.articleLarge__title}>
                       Blueprint fidelity: between paper prototype and finished
                       product
                     </h4>
-                    <p className="articleLarge__text">
+                    <p className={styles.articleLarge__text}>
                       Our suite of services is designed to cater to every aspect
                       of your online presence, from boosting your visibility to
                       engaging your audience and driving conversions.
                     </p>
-                    <div className="articleLarge__category">
+                    <div className={styles.articleLarge__category}>
                       2023 - UX/UI & App Development
                     </div>
                   </div>
-                  <a className="articleLarge__link" href="#">
+                  <a className={styles.articleLarge__link} href="#">
                     <Image
                       width={167}
                       height={167}
-                      className="articleLarge__link--img"
+                      className={styles.articleLarge__link__img}
                       src="/img/section-posts/arrow-right.svg"
                       alt=""
                     />
@@ -207,7 +206,7 @@ const Posts: React.FC = () => {
               </article>
             </div>
 
-            <div className="posts__infinite">
+            <div className={styles.posts__infinite}>
               <div className={styles.articles}>
                 {postsData.map((item: PostItem, idx) => (
                   <Article item={item} key={idx} />
@@ -215,15 +214,15 @@ const Posts: React.FC = () => {
               </div>
 
               {loadMoreVisible && (
-                <div className="loadMore_wrapper">
-                  <button onClick={handleLoadMore} className="loadMore">
+                <div className={styles.loadMore_wrapper}>
+                  <button onClick={handleLoadMore} className={styles.loadMore}>
                     Load more
                   </button>
                 </div>
               )}
 
               {(loading || scrollLoading) && (
-                <div className="loading_wrapper">
+                <div className={styles.loading_wrapper}>
                   <img
                     width={32}
                     height={32}
@@ -234,7 +233,7 @@ const Posts: React.FC = () => {
                 </div>
               )}
 
-              {!hasMore && <div className="line"></div>}
+              {!hasMore && <div className={styles.line}></div>}
             </div>
           </div>
         </div>

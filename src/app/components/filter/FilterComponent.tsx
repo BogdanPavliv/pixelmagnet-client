@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
 import Image from 'next/image';
+import styles from '../../styles/categories/index.module.scss';
 
 type Category = 'All' | 'Branding' | 'UX/UI Design' | 'App Development' | 'Web Development' | 'Digital Transformation';
 
@@ -20,13 +20,13 @@ const FilterComponent: React.FC<FilterComponentProps> = ({ onFilterChange, categ
   };
 
   return (
-    <div className="filter-container">
+    <div className={styles.filter_container}>
       {/* Фільтрація як кнопки для великих екранів */}
-      <div className="filter-buttons">
+      <div className={styles.filter_buttons}>
         {categories.map((category) => (
           <button
             key={category}
-            className={`filter-button ${selectedCategory === category ? 'active' : ''}`}
+            className={`${styles.filter_button} ${selectedCategory === category ? `${styles.active}` : ''}`}
             onClick={() => handleCategoryChange(category)}
           >
             {category}
@@ -35,17 +35,17 @@ const FilterComponent: React.FC<FilterComponentProps> = ({ onFilterChange, categ
       </div>
 
       {/* Випадаючий список для мобільних пристроїв */}
-      <div className="filter-dropdown">
-        <button className="dropdown-toggle" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+      <div className={styles.filter_dropdown}>
+        <button className={styles.dropdown_toggle} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
           {selectedCategory} <Image width={16} height={16} src="/img/arrow-down.svg" alt="" />
         </button>
         {isDropdownOpen && (
-          <div className="dropdown-menu">
-            <nav className="dropdown-list">
+          <div className={styles.dropdown_menu}>
+            <nav className={styles.dropdown_list}>
               {categories.map((category) => (
                 <button
                   key={category}
-                  className={`dropdown-item ${selectedCategory === category ? 'active' : ''}`}
+                  className={`${styles.dropdown_item} ${selectedCategory === category ? `${styles.active}` : ''}`}
                   onClick={() => handleCategoryChange(category)}
                 >
                   {category}

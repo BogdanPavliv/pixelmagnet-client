@@ -1,14 +1,15 @@
+import styles from '../../../styles/project-info/index.module.scss';
 const ProjectInfo = () => {
   return (
-    <section className="project-info">
+    <section className={styles.project_info}>
       <div className="container">
-        <div className="project-info__table">
-          <div className="project-info__table--row">
-            <div className="project-info__table--row-left">
-              <h3 className="project-info__table--title">The client</h3>
+        <div className={styles.project_info__table}>
+          <div className={styles.project_info__table__row}>
+            <div className={styles.project_info__table__row_left}>
+              <h3 className={styles.project_info__table__title}>The client</h3>
             </div>
-            <div className="project-info__table--row-right">
-              <p className="project-info__table--text">
+            <div className={styles.project_info__table__row_right}>
+              <p className={styles.project_info__table__text}>
                 Take a look at some of our proudest moments, where creativity,
                 strategy, and innovation came together to make brands shine in
                 the digital realm. Our success stories are a testament to our
@@ -16,29 +17,29 @@ const ProjectInfo = () => {
               </p>
             </div>
           </div>
-          <div className="project-info__table--row">
-            <div className="project-info__table--row-left">
-              <h3 className="project-info__table--title">Discipline used</h3>
+          <div className={styles.project_info__table__row}>
+            <div className={styles.project_info__table__row_left}>
+              <h3 className={styles.project_info__table__title}>Discipline used</h3>
             </div>
-            <div className="project-info__table--row-right">
-              <ul className="project-info__table--list">
-                <li className="project-info__table--item">UX/UI Design</li>
-                <li className="project-info__table--item">Micro-animations</li>
-                <li className="project-info__table--item">
+            <div className={styles.project_info__table__row_right}>
+              <ul className={styles.project_info__table__list}>
+                <li className={styles.project_info__table__item}>UX/UI Design</li>
+                <li className={styles.project_info__table__item}>Micro-animations</li>
+                <li className={styles.project_info__table__item}>
                   WordPress Development
                 </li>
-                <li className="project-info__table--item">
+                <li className={styles.project_info__table__item}>
                   Guttenberg Block Development
                 </li>
               </ul>
             </div>
           </div>
-          <div className="project-info__table--row">
-            <div className="project-info__table--row-left">
-              <h3 className="project-info__table--title">Project type</h3>
+          <div className={styles.project_info__table__row}>
+            <div className={styles.project_info__table__row_left}>
+              <h3 className={styles.project_info__table__title}>Project type</h3>
             </div>
-            <div className="project-info__table--row-right">
-              <p className="project-info__table--text">
+            <div className={styles.project_info__table__row_right}>
+              <p className={styles.project_info__table__text}>
                 UX/UI & App Development
               </p>
             </div>

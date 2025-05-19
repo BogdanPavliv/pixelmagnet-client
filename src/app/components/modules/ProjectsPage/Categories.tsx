@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import FilterComponent from "../../../components/filter/FilterComponent";
-import styles from "../../../projects/projects.module.scss";
+import styles from '../../../styles/categories/index.module.scss';
 import { dataProjects } from "../../../utils/data";
 import Link from 'next/link';
 import Image from "next/image";
@@ -106,7 +106,7 @@ const Categories = () => {
     setFilteredCategory(category);
   };
   return (
-    <section className="categories">
+    <section className={styles.categories}>
       <div className="container">
         <FilterComponent
           onFilterChange={handleFilterChange}
@@ -119,44 +119,44 @@ const Categories = () => {
             "Digital Transformation",
           ]}
         />
-        <div className="project-list">
+        <div className={styles.project_list}>
           {filteredProjects.map((project) => (
-            <article key={project.id} className="project-item">
+            <article key={project.id} className={styles.project_item}>
               <Link
                 href={`/project/${project.id}`}
-                className="project-item__link-detail"
+                className={styles.project_item__link_detail}
               >
                 <Image
                   width={414}
                   height={444}
-                  className="project-item__img"
+                  className={styles.project_item__img}
                   src={project.image}
                   alt={project.title}
                 />
               </Link>
-              <div className="project-item__data">
-                <h3 className="project-item__title">
+              <div className={styles.project_item__data}>
+                <h3 className={styles.project_item__title}>
                   <Link
                     href={`/project/${project.id}`}
-                    className="project-item__link-product"
+                    className={styles.project_item__link_product}
                   >
                     {project.title}
                   </Link>
                 </h3>
-                <p className="project-item__text">{project.text}</p>
+                <p className={styles.project_item__text}>{project.text}</p>
               </div>
             </article>
           ))}
         </div>
         {hasMore && !loading && !initialLoadDone && (
-          <div className="loadMore_wrapper">
-            <button onClick={loadMorePosts} className="loadMore">
+          <div className={styles.loadMore_wrapper}>
+            <button onClick={loadMorePosts} className={styles.loadMore}>
               Load more
             </button>
           </div>
         )}
         {(loading || scrollLoading) && (
-          <div className="loading_wrapper">
+          <div className={styles.loading_wrapper}>
             <Image
               width={32}
               height={32}

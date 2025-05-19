@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import styles from '../../../styles/project-details/index.module.scss';
 import { dataProjects } from "../../../utils/data";
 
 const ProjectDetails = ({ params }: { params: { id: string } }) => {
@@ -10,26 +11,26 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
   if (!project) return <p>Project not found</p>;
 
   return (
-    <section className="project-details">
+    <section className={styles.project_details}>
       <div className="container">
-        <div className="project-details__inner">
-          <div className="project-details__top">
-            <div className="project-details__top--left">
-              <div className="tag">Project details</div>
+        <div className={styles.project_details__inner}>
+          <div className={styles.project_details__top}>
+            <div className={styles.project_details__top__left}>
+              <div className={styles.tag}>Project details</div>
               <h1 className="title">{project.title}</h1>
             </div>
-            <div className="project-details__top--right">
-              <p className="project-details__top--right-text">
+            <div className={styles.project_details__top__right}>
+              <p className={styles.project_details__top__right_text}>
                 UX/UI & App Development 2022
               </p>
             </div>
           </div>
-          <div className="project-details__bottom">
-            <div className="project-details__bottom--img-wrapper">
+          <div className={styles.project_details__bottom}>
+            <div className={styles.project_details__bottom__img_wrapper}>
               <Image
                 width={1290}
                 height={572}
-                className="project-details__bottom--img"
+                className={styles.project_details__bottom__img}
                 src={project.images.image}
                 alt=""
               />

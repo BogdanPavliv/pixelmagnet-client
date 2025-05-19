@@ -2,6 +2,7 @@
 import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Promo from "../../../components/promo/Promo";
+import styles from '../../../styles/featured-works/index.module.scss';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,14 +23,14 @@ const FeaturedWorks = () => {
     }
   };
   return (
-    <section className="featured-works">
+    <section className={styles.featured_works}>
       <div className="container-lg">
-        <div className="featured-works__top">
-          <h1 className="title">Featured works</h1>
-          <a className="top--link" href="">
+        <div className={styles.featured_works__top}>
+          <h1 className={`title ${styles.featured_works__title}`}>Featured works</h1>
+          <a className={styles.top__link} href="">
             View all
             <Image
-              className="link-img"
+              className={styles.link_img}
               src="/img/section-featured-works/arrow-right.svg"
               width={36}
               height={36}
@@ -37,9 +38,9 @@ const FeaturedWorks = () => {
             />
           </a>
         </div>
-        <div className="featured-works__bottom">
+        <div className={styles.featured_works__bottom}>
           <div className="container-right">
-            <div className="featured-works__slider--wrapper">
+            <div className={styles.featured_works__slider__wrapper}>
               <Swiper
                 {...sliderFeaturedSettings}
                 onSwiper={(swiper) => {
@@ -49,30 +50,30 @@ const FeaturedWorks = () => {
                 className="swiper-featured"
               >
                 {dataFaetured.map((item, i) => (
-                  <SwiperSlide key={i} className="featured__slide--wrapper">
-                    <div className="featured__slide">
-                      <div className="featured__slide--img-wrapper">
+                  <SwiperSlide key={i} className={styles.featured__slide__wrapper}>
+                    <div className={styles.featured__slide}>
+                      <div className={styles.featured__slide__img_wrapper}>
                         <Image
                           width={548}
                           height={600}
-                          className="featured__slide--img"
+                          className={styles.featured__slide__img}
                           src={item.image}
                           alt={item.title}
                         />
                         {item.promo && <Promo />}
                       </div>
-                      <h3 className="featured__slide--title">{item.title}</h3>
-                      <p className="featured__slide--text">{item.text}</p>
+                      <h3 className={styles.featured__slide__title}>{item.title}</h3>
+                      <p className={styles.featured__slide__text}>{item.text}</p>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </div>
           </div>
-          <div className="featured-works__slider--controls">
+          <div className={styles.featured_works__slider__controls}>
             {/* Input для перемикання слайдів */}
             <input
-              className="featured-works__slider--range"
+              className={styles.featured_works__slider__range}
               type="range"
               min="0"
               max={dataFaetured.length - 1}

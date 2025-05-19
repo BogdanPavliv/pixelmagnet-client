@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
+import styles from '../../../styles/articles-related/index.module.scss';
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,11 +23,11 @@ const ArticlesRelated = () => {
     }
   };
   return (
-    <section className="articles-related">
+    <section className={styles.articles_related}>
       <div className="container-lg">
-        <div className="articles-related__top">
+        <div className={styles.articles_related__top}>
           <h1 className="title">Related articles</h1>
-          <a className="top--link" href="">
+          <a className={styles.top__link} href="#">
             View all
             <Image
               className="link-img"
@@ -37,9 +38,9 @@ const ArticlesRelated = () => {
             />
           </a>
         </div>
-        <div className="articles-related__bottom">
+        <div className={styles.articles_related__bottom}>
           <div className="container-right">
-            <div className="articles-related__slider--wrapper">
+            <div className={styles.articles_related__slider__wrapper}>
               <Swiper
                 {...sliderRelatedArticlesSettings}
                 onSwiper={(swiper) => {
@@ -49,29 +50,29 @@ const ArticlesRelated = () => {
                 className="swiper-article"
               >
                 {dataRelatedArticles.map((item, i) => (
-                  <SwiperSlide key={i} className="related__slide--wrapper">
-                    <div className="related__slide">
-                      <div className="related__slide--img-wrapper">
+                  <SwiperSlide key={i} className={styles.related__slide__wrapper}>
+                    <div className={styles.related__slide}>
+                      <div className={styles.related__slide__img_wrapper}>
                         <Image
                           width={628}
                           height={572}
-                          className="related__slide--img"
+                          className={styles.related__slide__img}
                           src={item.image}
                           alt={item.title}
                         />
                       </div>
-                      <h3 className="related__slide--title">{item.title}</h3>
-                      <p className="related__slide--text">{item.text}</p>
+                      <h3 className={styles.related__slide__title}>{item.title}</h3>
+                      <p className={styles.related__slide__text}>{item.text}</p>
                     </div>
                   </SwiperSlide>
                 ))}
               </Swiper>
             </div>
           </div>
-          <div className="articles-related__slider--controls">
+          <div className={styles.articles_related__slider__controls}>
             {/* Input для перемикання слайдів */}
             <input
-              className="articles-related__slider--range"
+              className={styles.articles_related__slider__range}
               type="range"
               min="0"
               max={dataRelatedArticles.length - 1}
