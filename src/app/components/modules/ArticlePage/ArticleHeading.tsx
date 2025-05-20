@@ -1,7 +1,8 @@
 "use client";
-import React, { useState, useRef, useEffect, useCallback } from "react";
+
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import styles from '../../../styles/article-heading/index.module.scss';
+import styles from "../../../styles/article-heading/index.module.scss";
 import axios from "../../../../app/utils/axios";
 import { dataPosts } from "../../../../app/utils/data";
 
@@ -14,45 +15,64 @@ interface Post {
   };
 }
 
-const ArticleHeading = ({ params }: { params: { id: string } }) => {
+interface ArticleHeadingProps {
+  id: string;
+}
+
+const ArticleHeading: React.FC<ArticleHeadingProps> = ({ id }) => {
   const [post, setPost] = useState<Post | null>(null);
-  console.log(post);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // Завантаження поста з бекенду або fallback
-  const fetchPost = useCallback(async () => {
-    try {
-      const { data } = await axios.get(`/posts/${params.id}`);
-      console.log(params.id);
-      console.log(data);
-
-      if (data) {
-        setPost(data);
-      } else {
-        const postId = parseInt(params.id, 10);
-        const fallbackPost = dataPosts.find((p) => p.id === postId);
+  useEffect(() => {
+    const fetchPost = async () => {
+      setLoading(true);
+      try {
+        const response = await axios.get<Post>(`/posts/${id}`);
+        if (response.status === 200 && response.data) {
+          setPost(response.data);
+        } else {
+          // throw new Error("No data from API");
+          const numericId = parseInt(id, 10);
+          const fallbackPost = dataPosts.find((p) => p.id === numericId) || null;
+          if (fallbackPost) {
+            setPost(fallbackPost);
+          } else {
+            setError("Post not found.");
+          }
+        }
+      } catch (err) {
+        console.warn("API fetch failed, falling back to local data:", err);
+        const numericId = parseInt(id, 10);
+        const fallbackPost = dataPosts.find((p) => p.id === numericId) || null;
         if (fallbackPost) {
           setPost(fallbackPost);
         } else {
-          console.warn("Post not found in fallback data.");
+          setError("Post not found.");
         }
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error("Error fetching post from server:", error);
-      const postId = parseInt(params.id, 10);
-      const fallbackPost = dataPosts.find((p) => p.id === postId);
-      if (fallbackPost) {
-        setPost(fallbackPost);
-      } else {
-        console.warn("Post not found in fallback data.");
-      }
-    }
-  }, [params.id]);
+    };
 
-  useEffect(() => {
     fetchPost();
-  }, [fetchPost]);
+  }, [id]);
 
-  if (!post) return <p>Post not found</p>;
+  if (loading) {
+    return (
+      <div className="container">
+        <div className="loader"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div className="container error">{error}</div>;
+  }
+
+  if (!post) {
+    return null;
+  }
 
   return (
     <section className={styles.article_heading}>
@@ -61,33 +81,21 @@ const ArticleHeading = ({ params }: { params: { id: string } }) => {
           <div className={styles.article_heading__top}>
             <div className={styles.article_heading__top__left}>
               <h3 className={styles.tag}>Article</h3>
-              <div className={styles.article_heading__title}>{post.title}</div>
+              <h1 className={styles.article_heading__title}>{post.title}</h1>
               <p className={styles.article_heading__date}>
-                Sept, 24 2023 • 3 min read
+                {/* You may replace the hardcoded date with a dynamic value */}
+                Sept 24, 2023 • 3 min read
               </p>
             </div>
             <div className={styles.article_heading__top__right}>
               <ul className={styles.article_heading__socials__list}>
-                <li className={styles.article_heading__socials__item}>
-                  <a href="#" className={styles.article_heading__socials__link}>
-                    instagram
-                  </a>
-                </li>
-                <li className={styles.article_heading__socials__item}>
-                  <a href="#" className={styles.article_heading__socials__link}>
-                    x
-                  </a>
-                </li>
-                <li className={styles.article_heading__socials__item}>
-                  <a href="#" className={styles.article_heading__socials__link}>
-                    facebook
-                  </a>
-                </li>
-                <li className={styles.article_heading__socials__item}>
-                  <a href="#" className={styles.article_heading__socials__link}>
-                    youtube
-                  </a>
-                </li>
+                {['instagram','x','facebook','youtube'].map((network) => (
+                  <li key={network} className={styles.article_heading__socials__item}>
+                    <a href="#" className={styles.article_heading__socials__link}>
+                      {network.charAt(0).toUpperCase() + network.slice(1)}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -98,7 +106,8 @@ const ArticleHeading = ({ params }: { params: { id: string } }) => {
                 height={572}
                 className={styles.article_heading__bottom__img}
                 src="/img/section-article/section-article-img-1.jpg"
-                alt=""
+                alt={post.title}
+                priority
               />
             </div>
           </div>

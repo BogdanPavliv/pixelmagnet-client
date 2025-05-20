@@ -3,15 +3,19 @@ import ArticleDetail from "../../../components/modules/ArticlePage/ArticleDetail
 import ArticlesRelated from "../../../components/modules/ArticlePage/ArticlesRelated";
 import Magnetize from "../../../components/modules/MainPage/Magnetize";
 
-const ArticlePage = ({ params }: { params: { id: string } }) => {
+interface ArticlePageProps {
+  id: string;
+}
+
+const ArticlePage: React.FC<ArticlePageProps> = ({ id }) => {
   return (
-    <div className='main'>
-      <ArticleHeading params={params}/>
+    <div className="main">
+      <ArticleHeading id={id} />
       <ArticleDetail />
       <ArticlesRelated />
       <Magnetize />
     </div>
-  )
-}
+  );
+};
 
-export default ArticlePage
+export default ArticlePage;
