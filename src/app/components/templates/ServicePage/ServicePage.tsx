@@ -8,14 +8,14 @@ import Magnetize from "../../../components/modules/MainPage/Magnetize";
 
 const ServicePage = () => {
   return (
-    <div className='main'>
+    <>
       <Empower />
       <Branding />
       <AppSection />
       <Digital />
       <Advancement />
       <Magnetize />
-    </div>
+    </>
   )
 }
 

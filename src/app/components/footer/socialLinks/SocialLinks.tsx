@@ -20,9 +20,7 @@ const links = [
     },
   ];
 
-type Props = {}
-
-const SocialLinks = (props: Props) => {
+const SocialLinks = () => {
   return (
     <ul className="footer__socialsList">
        {links.map((link) => (

@@ -25,9 +25,7 @@ const links = [
   },
 ];
 
-type Props = {}
-
-const Links = (props: Props) => {
+const Links = () => {
   return (
     <>
       <ul className={styles.header__navList}>

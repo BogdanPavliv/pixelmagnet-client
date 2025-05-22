@@ -21,9 +21,7 @@ const links = [
   },
 ];
 
-type Props = {}
-
-const FooterLinks = (props: Props) => {
+const FooterLinks = () => {
   return (
     <ul className="footer__navList">
       {links.map((link) => (

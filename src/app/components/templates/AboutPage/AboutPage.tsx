@@ -7,13 +7,13 @@ import Magnetize from "../../../components/modules/MainPage/Magnetize";
 
 const AboutPage = () => {
   return (
-    <div className='main'>
+    <>
       <Dedicated />
       <Mission />
       <WhoWeAre />
       <MeetTeam />
       <Magnetize />
-    </div>
+    </>
   )
 }
 

@@ -2,19 +2,9 @@ import React from 'react';
 import styles from '../../styles/article/index.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArticleProps } from '../../types/article';
 
-type Props = {
-  item: {
-    _id?: string; // Якщо дані приходять з MongoDB
-    id: number; // Для статичних ID
-    title: string;
-    text: string;
-    image: string;
-    imgUrl?: string;
-  };
-};
-
-const Article: React.FC<Props> = ({ item }) => {
+const Article: React.FC<ArticleProps> = ({ item }) => {
   // Формуємо коректний шлях для <Link />
   const linkHref = `/article/${item._id || item.id}`;
 

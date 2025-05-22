@@ -6,17 +6,9 @@ import styles from '../../../styles/posts/index.module.scss';
 import { dataPosts, dataPostsStatic } from "../../../utils/data";
 import Article from "../../article/Article";
 import { useDispatch, useSelector } from "react-redux";
-
+import { PostItem } from "../../../types/post";
 import { getAllPosts } from "../../../store/postSlice";
 import { AppDispatch } from "../../../store/store";
-
-type PostItem = {
-  _id?: any;
-  id: number;
-  title: string;
-  text: string;
-  image: string;
-};
 
 const Posts: React.FC = () => {
   // Дістаємо дані з Redux

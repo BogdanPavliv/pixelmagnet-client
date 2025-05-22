@@ -1,12 +1,9 @@
 import React, {ReactNode} from 'react';
 import { useState, useRef } from 'react';
 import styles from '../../styles/magnetize/index.module.scss';
+import { CircleProps } from "../../types/others";
 
-type Props = {
-    children: ReactNode;
-}
-
-const Circle: React.FC<Props> = ({children}) => {
+const Circle: React.FC<CircleProps> = ({children}) => {
     const [hover, setHover] = useState(false);
 
     const circleRef = useRef<HTMLDivElement | null>(null);

@@ -1,37 +1,3 @@
-// Оголошуємо інтерфейс для типізації
-interface BreakpointSettings {
-  slidesPerView: number;
-  spaceBetween: number;
-}
-
-interface SliderTestimonialsSettings {
-  slidesPerView: number;
-  spaceBetween: number;
-  breakpoints: {
-    [key: number]: BreakpointSettings;
-  };
-}
-
-// Типізуємо об'єкт sliderTestimonialsSettings
-// export const sliderBrandsSettings: SliderTestimonialsSettings = {
-//   slidesPerView: 1,
-//   spaceBetween: 15,
-//   breakpoints: {
-//     280: {
-//       slidesPerView: 1,
-//       spaceBetween: 15,
-//     },
-//     540: {
-//       slidesPerView: 2,
-//       spaceBetween: 15,
-//     },
-//     992: {
-//       slidesPerView: 6,
-//       spaceBetween: 25,
-//     },
-//   },
-// };
-
 export const sliderBrandsSettings = {
   dots: false,
   arrows: false,
@@ -64,36 +30,6 @@ export const sliderBrandsSettings = {
     },
   ],
 };
-
-// export const sliderFeaturedSettings = {
-//   dots: false,
-//   arrows: false,
-//   slidesToScroll: 1,
-//   // lazyLoad: true,
-//   infinite: true,
-//   centerPadding: "0px",
-//   slidesToShow: 2.5,
-//   speed: 500,
-//   // rtl: false, // Вимкнути режим справа наліво
-//   responsive: [
-//     {
-//       breakpoint: 992,
-//       settings: {
-//         slidesToShow: 2,
-//         slidesToScroll: 1,
-//         dots: false,
-//       },
-//     },
-//     {
-//       breakpoint: 540,
-//       settings: {
-//         slidesToShow: 1,
-//         slidesToScroll: 1,
-//         initialSlide: 1,
-//       },
-//     },
-//   ],
-// };
 
 export const sliderFeaturedSettings = {
   slidesPerView: 1,
@@ -133,40 +69,23 @@ export const sliderRelatedArticlesSettings = {
   },
 };
 
-// export const sliderTestimonialsSettings = {
-//   dots: true,
-//   arrows: true,
-//   infinite: true,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   vertical: true,
-//   verticalSwiping: true,
-//   swipeToSlide: true,
-//   beforeChange: function(currentSlide: any, nextSlide: any) {
-//     console.log("before change", currentSlide, nextSlide);
-//   },
-//   afterChange: function(currentSlide: any) {
-//     console.log("after change", currentSlide);
-//   }
-// };
-
 export const sliderTestimonialsSettings = {
   slidesPerView: 1,
   spaceBetween: 30,
-  direction: 'vertical', // Вертикальний напрямок
+  direction: 'vertical', 
   breakpoints: {
     280: {
-      direction: 'horizontal' as 'horizontal', // Явно вказуємо тип
+      direction: 'horizontal' as 'horizontal', 
       slidesPerView: 1,
       spaceBetween: 15,
     },
     540: {
-      direction: 'horizontal' as 'horizontal', // Явно вказуємо тип
+      direction: 'horizontal' as 'horizontal', 
       slidesPerView: 1,
       spaceBetween: 15,
     },
     1251: {
-      direction: 'vertical' as 'vertical', // Явно вказуємо тип
+      direction: 'vertical' as 'vertical', 
       slidesPerView: 1,
       spaceBetween: 30,
     },
@@ -248,4 +167,3 @@ export const sliderAdvancementSettings = {
     },
   },
 };
-

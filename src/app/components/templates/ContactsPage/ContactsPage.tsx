@@ -4,10 +4,10 @@ import ContactsSection from "../../../components/modules/ContactsPage/ContactsSe
 
 const ContactsPage = () => {
   return (
-    <div className="main">
-        <GetInTouch />
-        <ContactsSection />
-    </div>
+    <>
+      <GetInTouch />
+      <ContactsSection />
+    </>
   )
 }
 

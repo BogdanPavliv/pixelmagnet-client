@@ -5,11 +5,11 @@ import Magnetize from "../../../components/modules/MainPage/Magnetize";
 
 const ProjectsPage = () => {
   return (
-    <div className='main'>
+    <>
       <ProjectsSection />
       <Categories />
       <Magnetize />
-    </div>
+    </>
   )
 }
 

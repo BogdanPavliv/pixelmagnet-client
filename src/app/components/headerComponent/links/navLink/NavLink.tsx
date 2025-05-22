@@ -4,14 +4,10 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import { usePathname } from "next/navigation";
+import { closeMenu } from '../../../../store/headerSlice';
+import { NavLinkProps } from "../../../../types/nav";
 
-import { toggleMenu, closeMenu } from '../../../../store/headerSlice';
-
-type Props = {
-    item: { title: string; path: string; }; 
-}
-
-const NavLink = ({item}: Props) => {
+const NavLink = ({item}: NavLinkProps) => {
     const dispatch = useDispatch();
     const pathName = usePathname();
   return (

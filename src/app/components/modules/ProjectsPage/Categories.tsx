@@ -5,20 +5,10 @@ import styles from '../../../styles/categories/index.module.scss';
 import { dataProjects } from "../../../utils/data";
 import Link from 'next/link';
 import Image from "next/image";
-import { Category } from "../../../utils/data";
-
-type ProjectItem = {
-  id: number;
-  title: string;
-  text: string;
-  category: string;
-  image: string;
-};
+import { Category } from "../../../types/categories";
+import { ProjectItem } from "../../../types/categories";
 
 const Categories = () => {
-  const [projects, setProjects] = useState<ProjectItem[]>(
-    dataProjects.slice(0, 3)
-  );
   const [filteredProjects, setFilteredProjects] = useState<ProjectItem[]>([]);
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);

@@ -1,23 +1,5 @@
-interface ImagesArticle {
-  image: string;
-}
-
-interface Article {
-  id: number;
-  title: string;
-  text: string;
-  image: string;
-  imgUrl?: string;
-  images: ImagesArticle;
-}
-
-interface Article2 {
-  id: number;
-  title: string;
-  text: string;
-  image: string;
-  images: ImagesArticle;
-}
+import { Project } from "../types/categories";
+import { Article, Article2 } from "../types/article";
 
 export const dataPosts: Article[] = [
     {
@@ -759,25 +741,6 @@ export const dataRelatedArticles: Array<{ id: number; title: string; text: strin
       promo: false
   },
 ];
-
-export type Category = 'All' | 'Branding' | 'UX/UI Design' | 'App Development' | 'Web Development' | 'Digital Transformation';
-
-interface Images {
-  image: string;
-  image2: string;
-  image3: string;
-  image4: string;
-  image5: string;
-}
-
-interface Project {
-  id: number;
-  title: string;
-  text: string;
-  image: string;
-  category: Category;
-  images: Images;
-}
 
 export const dataProjects: Project[] = [
   { 

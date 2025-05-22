@@ -5,19 +5,7 @@ import Image from "next/image";
 import styles from "../../../styles/article-heading/index.module.scss";
 import axios from "../../../../app/utils/axios";
 import { dataPosts } from "../../../../app/utils/data";
-
-interface Post {
-  id: number;
-  title: string;
-  text: string;
-  images: {
-    image: string;
-  };
-}
-
-interface ArticleHeadingProps {
-  id: string;
-}
+import { Post, ArticleHeadingProps } from "../../../types/post";
 
 const ArticleHeading: React.FC<ArticleHeadingProps> = ({ id }) => {
   const [post, setPost] = useState<Post | null>(null);

@@ -1,12 +1,6 @@
-import React, { RefObject } from 'react';
-import { Swiper as SwiperClass } from 'swiper';
+import { SlideNavigationProps } from "../../types/others";
 
-type Props = {
-    testimonialsRef: RefObject<SwiperClass>;
-  };
-  
-
-const SlideNavigation = ({ testimonialsRef }: Props) => {
+const SlideNavigation = ({ testimonialsRef }: SlideNavigationProps) => {
     const slidePrev = () => {
         if (testimonialsRef.current && testimonialsRef.current.slidePrev) {
             testimonialsRef.current.slidePrev();

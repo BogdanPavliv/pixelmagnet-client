@@ -3,22 +3,14 @@
 import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import Links from './links/Links';
-
 import Link from 'next/link';
-
 import { useDispatch, useSelector } from 'react-redux';
 import useMediaQuery from "../../hooks/useMediaQuery";
 import { RootState } from '../../store/store';
-import { toggleMenu, closeMenu } from "../../store/headerSlice";
+import { toggleMenu } from "../../store/headerSlice";
+import { isTopOfPageProps } from "../../types/nav";
 
-import { useLocalStorage } from './../../utils/useLocalStorage';
-import detectDarkMode from '../../utils/detectDarkMode';
-
-type Props = {
-  isTopOfPage: boolean;
-}
-
-const HeaderComponent = ({ isTopOfPage }: Props) => {
+const HeaderComponent = ({ isTopOfPage }: isTopOfPageProps) => {
   const dispatch = useDispatch();
   const isMenuToggled = useSelector((state: RootState) => state.header.isMenuToggled);
   const isAboveMediumScreens = useMediaQuery("(max-width: 991px)");

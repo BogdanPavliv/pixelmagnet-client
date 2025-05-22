@@ -1,8 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-interface HeaderState {
-    isMenuToggled: boolean;
-}
+import { HeaderState } from "../types/others";
 
 const initialState: HeaderState = {
     isMenuToggled: false,

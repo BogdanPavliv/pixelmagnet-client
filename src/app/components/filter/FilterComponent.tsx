@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from '../../styles/categories/index.module.scss';
-
-type Category = 'All' | 'Branding' | 'UX/UI Design' | 'App Development' | 'Web Development' | 'Digital Transformation';
-
-interface FilterComponentProps {
-  onFilterChange: (category: Category) => void;
-  categories: Category[];
-}
+import { Category, FilterComponentProps } from "../../types/categories";
 
 const FilterComponent: React.FC<FilterComponentProps> = ({ onFilterChange, categories }) => {
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');

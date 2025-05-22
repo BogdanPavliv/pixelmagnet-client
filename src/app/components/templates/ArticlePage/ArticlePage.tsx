@@ -2,10 +2,7 @@ import ArticleHeading from "../../../components/modules/ArticlePage/ArticleHeadi
 import ArticleDetail from "../../../components/modules/ArticlePage/ArticleDetail";
 import ArticlesRelated from "../../../components/modules/ArticlePage/ArticlesRelated";
 import Magnetize from "../../../components/modules/MainPage/Magnetize";
-
-interface ArticlePageProps {
-  id: string;
-}
+import { ArticlePageProps } from "../../../types/article";
 
 const ArticlePage: React.FC<ArticlePageProps> = ({ id }) => {
   return (
