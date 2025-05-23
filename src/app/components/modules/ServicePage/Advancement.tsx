@@ -13,9 +13,9 @@ const Advancement = () => {
   // Slider Advancement
 
   const [currentSlideAdvancement, setCurrentSlideAdvancement] = useState(0);
-  const swiperRef4 = useRef<any>(null); // Використовується для доступу до Swiper instance
+  const swiperRef4 = useRef<any>(null); // Used to access the Swiper instance
 
-  // Функція для оновлення слайда при зміні input range
+  // Function to update the slide when the input range changes
   const handleSlideChangeAdvancement = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(event.target.value);
     setCurrentSlideAdvancement(value);
@@ -58,8 +58,8 @@ const Advancement = () => {
                 {...sliderAdvancementSettings}
                 onSwiper={(swiper) => {
                   swiperRef4.current = swiper;
-                }} // Зберігаємо інстанс swiper
-                onSlideChange={(swiper) => setCurrentSlideAdvancement(swiper.activeIndex)} // Оновлюємо значення input при зміні слайду
+                }} // Save the swiper instance
+                onSlideChange={(swiper) => setCurrentSlideAdvancement(swiper.activeIndex)} // Update input value when slide changes
                 className="swiper-advancement"
               >
                 {dataAdvancement.map((item, i) => (
@@ -86,7 +86,7 @@ const Advancement = () => {
             </div>
           </div>
           <div className={styles.advancement__slider__controls}>
-            {/* Input для перемикання слайдів */}
+            {/* Input for switching slides */}
             <input
               className={styles.advancement__slider__range}
               type="range"

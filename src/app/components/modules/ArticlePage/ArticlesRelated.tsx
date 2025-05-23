@@ -12,8 +12,8 @@ const ArticlesRelated = () => {
   // slider swiper
 
   const [currentSlide, setCurrentSlide] = useState(0);
-  const swiperRef = useRef<any>(null); // Використовується для доступу до Swiper instance
-  // Функція для оновлення слайда при зміні input range
+  const swiperRef = useRef<any>(null); // Used to access the Swiper instance
+  // Function to update the slide when the input range changes
 
   const handleSlideChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(event.target.value);
@@ -45,8 +45,8 @@ const ArticlesRelated = () => {
                 {...sliderRelatedArticlesSettings}
                 onSwiper={(swiper) => {
                   swiperRef.current = swiper;
-                }} // Зберігаємо інстанс swiper
-                onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)} // Оновлюємо значення input при зміні слайду
+                }} // Save the swiper instance
+                onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)} // Update the input value when the slide changes
                 className="swiper-article"
               >
                 {dataRelatedArticles.map((item, i) => (
@@ -70,7 +70,7 @@ const ArticlesRelated = () => {
             </div>
           </div>
           <div className={styles.articles_related__slider__controls}>
-            {/* Input для перемикання слайдів */}
+            {/* Input for switching slides */}
             <input
               className={styles.articles_related__slider__range}
               type="range"

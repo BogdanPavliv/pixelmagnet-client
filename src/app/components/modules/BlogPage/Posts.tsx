@@ -11,17 +11,17 @@ import { getAllPosts } from "../../../store/postSlice";
 import { AppDispatch } from "../../../store/store";
 
 const Posts: React.FC = () => {
-  // Дістаємо дані з Redux
+  // Get data from Redux
   const dispatch: AppDispatch = useDispatch();
   const { posts, popularPosts } = useSelector(
     (state: { post: { posts: PostItem[]; popularPosts: PostItem[] } }) =>
       state.post
   );
 
-  // Визначаємо, яке джерело використовувати: дані з бекенду або fallback
+  // Determine which source to use: data from the backend or fallback
   const sourcePosts = Array.isArray(posts) && posts.length ? posts : dataPosts;
 
-  // Ініціалізуємо локальний стейт
+  // Initialize the local state
   const [postsData, setPostsData] = useState<PostItem[]>(
     sourcePosts.slice(0, 2)
   );
@@ -30,19 +30,19 @@ const Posts: React.FC = () => {
   const [scrollLoading, setScrollLoading] = useState(false);
   const [loadMoreVisible, setLoadMoreVisible] = useState(true);
 
-  // При монтуванні компонента — отримуємо всі пости
+  // When mounting the component, we get all posts
   useEffect(() => {
     dispatch(getAllPosts());
   }, [dispatch]);
 
-  // Коли posts з бекенду змінюються, оновлюємо локальний стейт
+  // When posts from the backend change, update the local state
   useEffect(() => {
     if (Array.isArray(posts) && posts.length) {
       setPostsData(posts.slice(0, 2));
     }
   }, [posts]);
 
-  // Логіка дозавантаження на скрол
+  // Reload logic on scroll
   const loadMorePostsOnScroll = () => {
     const currentSource =
       Array.isArray(posts) && posts.length ? posts : dataPosts;
@@ -73,7 +73,7 @@ const Posts: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [loading, scrollLoading, loadMoreVisible, postsData, posts]);
 
-  // Логіка завантаження "Load more" по кліку
+  // "Load more" loading logic on click
   const loadMorePosts = () => {
     const currentSource =
       Array.isArray(posts) && posts.length ? posts : dataPosts;

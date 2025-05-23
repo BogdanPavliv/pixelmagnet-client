@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Pixelmagnet | Contacts',
 }
 
-export default function ServiceRootLayout({
+export default function ContactsRootLayout({
   children,
 }: {
   children: React.ReactNode

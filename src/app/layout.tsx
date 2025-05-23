@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import PagesLayout from './components/layouts/PagesLayout';
 import './globalStyles/normalize.css'
+import "./globalStyles/null.css";
 import "./globalStyles/globals.scss";
+import './globalStyles/header.scss'
+import './globalStyles/footer.scss'
 
 export const metadata: Metadata = {
   title: "Pixelmagnet | Digital Agency",

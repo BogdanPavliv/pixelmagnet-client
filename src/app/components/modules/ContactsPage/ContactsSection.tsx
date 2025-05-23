@@ -1,7 +1,6 @@
 "use client";
-
 import React, { useEffect, useState, FormEvent } from "react";
-import styles from '../../../styles/contacts/index.module.scss';
+import styles from "../../../styles/contacts/index.module.scss";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 
@@ -25,11 +24,8 @@ const budgetOptions = [
 
 const ContactsSection = () => {
   // PhoneInput
-
   const [value, setValue] = useState<string | undefined>();
-
   // Category
-
   const [selectedCategory, setSelectedCategory] = useState<string | undefined>(
     undefined
   );
@@ -42,24 +38,23 @@ const ContactsSection = () => {
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    // Дії при відправленні форми, наприклад, відправлення даних на сервер
+    // Actions when submitting a form, for example, sending data to the server
     console.log("Selected category:", selectedCategory);
   };
 
   //  Budget options
-
   const [selectedBudget, setSelectedBudget] = useState<string | null>(null);
   const [customBudget, setCustomBudget] = useState<string>("");
 
   const handleBudgetClick = (budget: string) => {
     setSelectedBudget(budget);
-    setCustomBudget(""); // Очистити поле, якщо обрана опція
+    setCustomBudget(""); // Clear the field if the option is selected
   };
 
   const handleCustomBudgetChange = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    setSelectedBudget(null); // Зняти вибір опцій при введенні власного значення
+    setSelectedBudget(null); // Deselect options when entering your own value
     setCustomBudget(event.target.value);
   };
 
@@ -167,7 +162,12 @@ const ContactsSection = () => {
     <section className={styles.contacts}>
       <div className="container-form">
         <div className={styles.contacts__inner}>
-          <form action="#!" id="form" className={styles.form} onSubmit={handleSubmit}>
+          <form
+            action="#!"
+            id="form"
+            className={styles.form}
+            onSubmit={handleSubmit}
+          >
             <div className={styles.form__top}>
               <div className={styles.form__top__row}>
                 <label className={styles.form__label} htmlFor="formName">
@@ -341,7 +341,11 @@ const ContactsSection = () => {
               </p>
             </div>
             <div className={styles.form__bottom}>
-              <button disabled={!formValid} className={styles.form__btn} type="submit">
+              <button
+                disabled={!formValid}
+                className={styles.form__btn}
+                type="submit"
+              >
                 Submit
               </button>
             </div>

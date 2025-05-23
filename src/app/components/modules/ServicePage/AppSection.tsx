@@ -14,9 +14,9 @@ const AppSection = () => {
   // Slider App
 
   const [currentSlideApp, setCurrentSlideApp] = useState(0);
-  const swiperRef2 = useRef<any>(null); // Використовується для доступу до Swiper instance
+  const swiperRef2 = useRef<any>(null); // Used to access the Swiper instance
 
-  // Функція для оновлення слайда при зміні input range
+  // Function to update the slide when the input range changes
   const handleSlideChangeApp = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(event.target.value);
     setCurrentSlideApp(value);
@@ -59,8 +59,8 @@ const AppSection = () => {
                 {...sliderAppSettings}
                 onSwiper={(swiper) => {
                   swiperRef2.current = swiper;
-                }} // Зберігаємо інстанс swiper
-                onSlideChange={(swiper) => setCurrentSlideApp(swiper.activeIndex)} // Оновлюємо значення input при зміні слайду
+                }} // Save the swiper instance
+                onSlideChange={(swiper) => setCurrentSlideApp(swiper.activeIndex)} // Update the input value when the slide changes
                 className="swiper-app"
               >
                 {dataApp.map((item, i) => (
@@ -85,7 +85,7 @@ const AppSection = () => {
             </div>
           </div>
           <div className={styles.app__slider__controls}>
-            {/* Input для перемикання слайдів */}
+            {/* Input for switching slides */}
             <input
               className={styles.app__slider__range}
               type="range"

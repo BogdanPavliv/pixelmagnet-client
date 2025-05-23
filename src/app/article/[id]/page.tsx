@@ -1,11 +1,8 @@
 "use client";
-import { useParams } from "next/navigation"; // Використання useParams
-import { useLenis } from "../../hooks/useLenis";
+import { useParams } from "next/navigation";
 import ArticlePage from "../../components/templates/ArticlePage/ArticlePage";
 
 const Article = () => {
-  useLenis();
-
   const params = useParams();
   
   // Гарантуємо, що `params.id` — це рядок

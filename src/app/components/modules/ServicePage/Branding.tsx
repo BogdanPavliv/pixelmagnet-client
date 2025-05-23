@@ -13,9 +13,9 @@ const Branding = () => {
   // Slider Branding
 
   const [currentSlideBranding, setCurrentSlideBranding] = useState(0);
-  const swiperRef1 = useRef<any>(null); // Використовується для доступу до Swiper instance
+  const swiperRef1 = useRef<any>(null); // Used to access the Swiper instance
 
-  // Функція для оновлення слайда при зміні input range
+  // Function to update the slide when the input range changes
   const handleSlideChangeBranding = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -62,10 +62,10 @@ const Branding = () => {
                 {...sliderBrandingSettings}
                 onSwiper={(swiper) => {
                   swiperRef1.current = swiper;
-                }} // Зберігаємо інстанс swiper
+                }} // Save the swiper instance
                 onSlideChange={(swiper) =>
                   setCurrentSlideBranding(swiper.activeIndex)
-                } // Оновлюємо значення input при зміні слайду
+                } // Update the input value when the slide changes
                 className="swiper-branding"
               >
                 {dataBranding.map((item, i) => (
@@ -90,7 +90,7 @@ const Branding = () => {
             </div>
           </div>
           <div className={styles.branding__slider__controls}>
-            {/* Input для перемикання слайдів */}
+            {/* Input for switching slides */}
             <input
               className={styles.branding__slider__range}
               type="range"

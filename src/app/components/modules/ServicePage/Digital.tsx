@@ -14,9 +14,9 @@ const Digital = () => {
   // Slider Digital
 
   const [currentSlideDigital, setCurrentSlideDigital] = useState(0);
-  const swiperRef3 = useRef<any>(null); // Використовується для доступу до Swiper instance
+  const swiperRef3 = useRef<any>(null); // Used to access the Swiper instance
 
-  // Функція для оновлення слайда при зміні input range
+  // Function to update the slide when the input range changes
   const handleSlideChangeDigital = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = Number(event.target.value);
     setCurrentSlideDigital(value);
@@ -59,8 +59,8 @@ const Digital = () => {
                 {...slideDigitalSettings}
                 onSwiper={(swiper) => {
                   swiperRef3.current = swiper;
-                }} // Зберігаємо інстанс swiper
-                onSlideChange={(swiper) => setCurrentSlideDigital(swiper.activeIndex)} // Оновлюємо значення input при зміні слайду
+                }} // Save the swiper instance
+                onSlideChange={(swiper) => setCurrentSlideDigital(swiper.activeIndex)} // Update input value when slide changes
                 className="swiper-digital"
               >
                 {dataDigital.map((item, i) => (
@@ -85,7 +85,7 @@ const Digital = () => {
             </div>
           </div>
           <div className={styles.digital__slider__controls}>
-            {/* Input для перемикання слайдів */}
+            {/* Input for switching slides */}
             <input
               className={styles.digital__slider__range}
               type="range"

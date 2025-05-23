@@ -1,7 +1,6 @@
 // src/app/components/Footer.tsx
 import React from 'react';
 import BtnDarkMode from '../btnDarkMode/BtnDarkMode';
-import "./footer.scss";
 import FooterLinks from "./links/FooterLinks";
 import SocialLinks from "./socialLinks/SocialLinks";
 

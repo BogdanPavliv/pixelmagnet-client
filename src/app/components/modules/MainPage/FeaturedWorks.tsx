@@ -45,8 +45,8 @@ const FeaturedWorks = () => {
                 {...sliderFeaturedSettings}
                 onSwiper={(swiper) => {
                   swiperRef.current = swiper;
-                }} // Зберігаємо інстанс swiper
-                onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)} // Оновлюємо значення input при зміні слайду
+                }} // Save the swiper instance
+                onSlideChange={(swiper) => setCurrentSlide(swiper.activeIndex)} // Update the input value when the slide changes
                 className="swiper-featured"
               >
                 {dataFaetured.map((item, i) => (
@@ -71,7 +71,7 @@ const FeaturedWorks = () => {
             </div>
           </div>
           <div className={styles.featured_works__slider__controls}>
-            {/* Input для перемикання слайдів */}
+            {/* Input for switching slides */}
             <input
               className={styles.featured_works__slider__range}
               type="range"

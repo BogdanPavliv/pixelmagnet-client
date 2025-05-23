@@ -1,0 +1,119 @@
+/* section header start */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30;
+  background-color: var(--bg-primary);
+  transition: background-color 250ms ease-in;
+
+  .logo {
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #F1F1F1;
+    // background-color: var(--page-bg);
+  }
+
+  &__inner {
+    padding: 47px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    position: relative;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+  }
+
+  /* nav link */
+
+  &__navLink {
+    font-family: "Urbanist-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--text-color);
+    position: relative;
+  }
+
+  &__navLink::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: -6px;
+    background-color: #156AD4;
+    transform: scale(0);
+    transition: transform cubic-bezier(0.4, 0, 0.2, 1) 150ms;
+  }
+
+  &__navLink:hover {
+    color: #156AD4;
+  }
+
+  &__navLink:hover::after {
+    transform: scale(1);
+  }
+}
+
+.action {
+  &__buttonMenu {
+    max-width: 100%;
+    width: 176px;
+    height: 44px;
+    padding: 4px 22px;
+    border-radius: 100px;
+    border: 1px solid var(--text-color);
+    ;
+    font-family: "Urbanist-Regular", sans-serif;
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 250ms ease-in;
+  }
+
+  &__buttonMenu:hover {
+    opacity: .8;
+  }
+
+}
+
+.active {
+  color: #156AD4;
+}
+
+.active::after {
+  transform: scale(1);
+}
+
+@media (max-width: 1150px) {
+  .header__nav {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    padding: 44px 0;
+  }
+}
+
+/* section header end */

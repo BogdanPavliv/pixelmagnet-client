@@ -25,9 +25,9 @@ const Testimonials = () => {
               <Swiper 
                 {...sliderTestimonialsSettings}
                 className='slider-testimonials'
-                direction={"vertical"} // Вертикальний напрямок
+                direction={"vertical"} 
                 pagination={{
-                  el: '.custom-pagination', // Вказуємо контейнер для пагінації
+                  el: '.custom-pagination', 
                   clickable: true,
                   renderBullet: (index, className) => {
                     return `<span class="${className} custom-bullet"></span>`;

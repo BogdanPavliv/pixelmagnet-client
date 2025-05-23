@@ -4,7 +4,7 @@ export const metadata = {
   title: 'Pixelmagnet | Blog',
 }
 
-export default function ServiceRootLayout({
+export default function BlogRootLayout({
   children,
 }: {
   children: React.ReactNode
