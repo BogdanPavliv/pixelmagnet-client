@@ -48,14 +48,22 @@ const ArticleHeading: React.FC<ArticleHeadingProps> = ({ id }) => {
 
   if (loading) {
     return (
-      <div className="container">
-        <div className="loader"></div>
-      </div>
+      <section className="loader_section">
+        <div className="container">
+          <div className="loader"></div>
+        </div>
+      </section>
     );
   }
 
   if (error) {
-    return <div className="container error">{error}</div>;
+    return (
+      <section className="error_section">
+        <div className="container">
+          <div className="error">{error}</div> 
+        </div>
+      </section>
+    );
   }
 
   if (!post) {

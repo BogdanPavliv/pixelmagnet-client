@@ -1,14 +1,22 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import styles from '../../../styles/project-details/index.module.scss';
+import styles from "../../../styles/project-details/index.module.scss";
 import { dataProjects } from "../../../utils/data";
 
 const ProjectDetails = ({ params }: { params: { id: string } }) => {
   const projectId = parseInt(params.id, 10);
   const project = dataProjects.find((p) => p.id === projectId);
 
-  if (!project) return <p>Project not found</p>;
+  if (!project) {
+    return (
+      <section className="loader_section">
+        <div className="container">
+          <div className="loader"></div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className={styles.project_details}>

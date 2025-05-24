@@ -5,7 +5,7 @@ import ArticlePage from "../../components/templates/ArticlePage/ArticlePage";
 const Article = () => {
   const params = useParams();
   
-  // Гарантуємо, що `params.id` — це рядок
+  // We guarantee that `params.id` is a string
   const id = Array.isArray(params.id) ? params.id[0] : params.id;
 
   return <ArticlePage id={id} />;
