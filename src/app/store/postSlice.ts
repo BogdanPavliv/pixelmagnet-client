@@ -7,7 +7,7 @@ const initialState = {
     loading: false,
 }
 
-// 
+
 export const getAllPosts = createAsyncThunk('post/getAllPosts', async () => {
     try {
         const { data } = await axios.get('/posts')
@@ -28,7 +28,7 @@ export const postSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-        // Получаение всех постов
+        // Getting all posts
         builder
             .addCase(getAllPosts.pending, (state) => {
                 state.loading = true
