@@ -122,7 +122,8 @@ const Posts: React.FC = () => {
                     height={572}
                     className={styles.articleLarge__img}
                     src="/img/section-posts/post-img-5.jpg"
-                    alt=""
+                    alt="Blog image"
+                    loading='eager'
                   />
                 </div>
                 <div className={styles.articleLarge__content__wrapper}>

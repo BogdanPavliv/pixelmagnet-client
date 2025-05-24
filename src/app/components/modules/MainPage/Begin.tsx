@@ -40,6 +40,7 @@ const Begin = () => {
                   width={1376}
                   height={424}
                   alt="begin"
+                  loading='eager'
                 />
               </div>
 
