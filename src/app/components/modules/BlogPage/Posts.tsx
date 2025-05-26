@@ -16,28 +16,28 @@ const Posts: React.FC = () => {
     (state: { post: { posts: PostItem[] } }) => state.post
   );
 
-  // Визначення джерела даних
+  // Define the data source
   const allPosts = Array.isArray(posts) && posts.length ? posts : dataPosts;
 
-  // Локальний стан
+  // Local state
   const [postsData, setPostsData] = useState<PostItem[]>([]);
   const [hasMore, setHasMore] = useState(true);
   const [loading, setLoading] = useState(false);
 
-  // Завантаження даних з Redux
+  // Loading data from Redux
   useEffect(() => {
     if (!posts.length) {
       dispatch(getAllPosts());
     }
   }, [dispatch, posts.length]);
 
-  // Ініціалізація постів при зміні джерела даних
+  // Initialize posts when changing data source
   useEffect(() => {
     setPostsData(allPosts.slice(0, 2));
     setHasMore(allPosts.length > 2);
   }, [allPosts]);
 
-  // Логіка завантаження додаткових постів
+  // Logic for loading additional posts
   const loadMorePosts = () => {
     if (postsData.length >= allPosts.length) {
       setHasMore(false);
@@ -122,7 +122,6 @@ const Posts: React.FC = () => {
                   <Article item={item} key={idx} />
                 ))}
               </div>
-
               {hasMore && (
                 <div className={styles.loadMore_wrapper}>
                   <button onClick={loadMorePosts} className={styles.loadMore}>
@@ -130,8 +129,17 @@ const Posts: React.FC = () => {
                   </button>
                 </div>
               )}
-
-              {!hasMore && <div className={styles.line}></div>}
+              {loading && (
+                <div className={styles.loading_wrapper}>
+                  <Image
+                    width={32}
+                    height={32}
+                    className={styles.loading}
+                    src="/img/section-posts/loading.gif"
+                    alt=""
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
