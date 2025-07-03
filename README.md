@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PixelMagnet Client
 
-## Getting Started
+**PixelMagnet** — це клієнтська частина повноцінного веб-застосунку, який поєднує анімації, безпечну авторизацію, нескінченну прокрутку контенту та підключення до бекенду через MongoDB. Створено на базі **Next.js 14**, з використанням **Redux Toolkit**, **Effector**, **Lenis scroll**, **Mongoose**, **Axios**, **Framer Motion**, та інших сучасних бібліотек.
 
-First, run the development server:
+## ⚙️ Технологічний стек
 
-```bash
+- **Next.js 14**  
+- **React 18 / Redux Toolkit / Effector**
+- **TypeScript**
+- **MongoDB + Mongoose**
+- **Framer Motion / Lenis / Swiper / React Slick**
+- **SCSS (SASS Loader)**
+- **Axios, dotenv, jsonwebtoken, bcryptjs**
+
+## 🚀 Основні особливості
+
+- ⚙️ **Серверний рендеринг та SEO** завдяки Next.js 14
+- 🔄 **Централізоване керування станом** через Redux Toolkit та Effector
+- 🔐 **JWT-авторизація** з використанням `jsonwebtoken` та `bcryptjs`
+- 🔄 **База даних MongoDB** — підключення через Mongoose
+- 📱 **Мобільна адаптивність** та інтерактивність (слайдери, лічильники, модалки)
+- 🔁 **Нескінченна прокрутка** через `react-infinite-scroll-component`
+- ✉️ **Валідація форм** + інтерактивні нотифікації через `react-hot-toast`
+- 📞 **Телефонні форми** з `react-phone-number-input`
+- 🎯 **Smooth Scroll** через Lenis
+- 📦 **Axios** — підключення до бекенду для отримання динамічних даних
+
+## 📦 Встановлення
+
+- bash
+git clone https://github.com/BogdanPavliv/pixelmagnet-client.git
+cd pixelmagnet-client
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Команди
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Скрипт          | Опис                                           |
+| --------------- | ---------------------------------------------- |
+| `npm run dev`   | Запускає локальний сервер Next.js для розробки |
+| `npm run build` | Створює продакшен-білд за допомогою Next.js    |
+| `npm run start` | Запускає продакшен-версію сервера              |
+| `npm run lint`  | Запускає аналіз коду за допомогою ESLint       |
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🛠️ Розгортання
 
-## Learn More
+[Watch demo](https://pixelmagnet-mongodb-client.netlify.app/)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+👨‍💻 Автор
+Богдан Павлів — Frontend Developer
+📧 [bogdan.pavliv@gmail.com]
+🌐 [My portfolio](https://bogdan-pavliv.netlify.app)
