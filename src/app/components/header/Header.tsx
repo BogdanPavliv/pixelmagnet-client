@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import HeaderComponent from "../headerComponent/HeaderComponent";
 
-
 const Header = () => {
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
   useEffect(() => {
